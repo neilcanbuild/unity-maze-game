@@ -26,5 +26,5 @@ The player rotates in a bit of bizarre way when going left for some reason, but 
 
 Overall, you did an excellent job. I hope you had as much fun in the course as I had teaching you."
 
-# Score:
+# Score
 14/14
