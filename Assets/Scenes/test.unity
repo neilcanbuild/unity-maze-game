@@ -26649,7 +26649,7 @@ GameObject:
   - component: {fileID: 507767492}
   - component: {fileID: 507767493}
   m_Layer: 5
-  m_Name: GameOverlay
+  m_Name: FailOverlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
