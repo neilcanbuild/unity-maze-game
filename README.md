@@ -28,3 +28,6 @@ Overall, you did an excellent job. I hope you had as much fun in the course as I
 
 # Score
 14/14
+
+# Downloads
+A downloadable ZIP file can be found under releases.
