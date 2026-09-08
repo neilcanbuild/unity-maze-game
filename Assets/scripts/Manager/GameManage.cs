@@ -31,6 +31,13 @@ public class GameManager : MonoBehaviour
         PlayerHP.playerRunOutLives += GameOver;
 
     }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseGame();
+        }
+    }
 
     private void OnDestroy()
     {
@@ -61,6 +68,25 @@ public class GameManager : MonoBehaviour
     {
         // reload game
         SceneManager.LoadScene("test");
+    }
 
+    public void Exit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
+
+    public void PauseGame()
+    {
+        UIManage.Instance.DisplayExitOverlay();
+        Time.timeScale = 0f;
+    }
+    public void Resume()
+    {
+        UIManage.Instance.CloseExitOverlay();
+        Time.timeScale = 1f;
     }
 }

@@ -49,7 +49,7 @@ public class PlayerControlRigidBody : MonoBehaviour
     
             // rotate in player input direction
             float angle = Mathf.Atan2(horizontalInput, verticalInput) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0, 0, angle);
+            transform.rotation = Quaternion.Euler(0, 0, -angle);
         }
         else
         {

@@ -14,13 +14,18 @@ public class PlayerShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButton(0) && Time.time >= nextFireTime)
+        // dont allow shooting when game is paused
+        if (Time.timeScale == 0f)
         {
+            return;
+        }
+            if (Input.GetMouseButton(0) && Time.time >= nextFireTime)
+            {
             Shoot();
             
             // reset timer
             nextFireTime = Time.time + fireRate;
-        }
+            }
     }
     void Shoot()
     {

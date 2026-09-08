@@ -3,6 +3,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Analytics;
+using UnityEngine.EventSystems;
 
 public class UIManage : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class UIManage : MonoBehaviour
     [SerializeField] private TextMeshProUGUI playerLivesText;
     public GameObject gameOverlay;
     public GameObject winOverlay;
+    public GameObject exitOverlay;
 
     // instance
     public static UIManage Instance;
@@ -66,4 +68,16 @@ public class UIManage : MonoBehaviour
         // play audio
         winOverlay.GetComponent<AudioSource>().Play();
     }
+
+    public void DisplayExitOverlay()
+    {
+        exitOverlay.SetActive(true);
+    }
+
+    public void CloseExitOverlay()
+    {
+        exitOverlay.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(null);
+    }
 }
+
