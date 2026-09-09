@@ -5,6 +5,7 @@
 - Player movement and sprite animation
 - Damage dealing hazards (i.e. Bombs, Lava)
 - SFX for opening doors, acquiring keys, etc.
+- Custom Background Music
 - Pushable objects
 - Overlays for winning and losing
 - Overlay for on-screen chest interaction prompt
